@@ -1,0 +1,18 @@
+{
+  "name": "webscraper",
+  "version": "1.0.0",
+  "description": "scrapes the web for info",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
