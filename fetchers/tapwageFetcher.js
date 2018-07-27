@@ -2,10 +2,8 @@ const request = require('request-promise');
 const $ = require('cheerio')
 
 var tapwage = "https://tapwage.com/search?q=&l=Ghana"
-// var jobhouse = "https://jobhouse.com.gh/jobs-in-ghana/view-jobs/search-jobs/?search_keywords=&search_location=Accra&search_categories%5B%5D=#s=1"
 
-//why is this an async function?
-const fetcher = async () => {
+const tapwageFetcher = async () => {
   const options = {
     uri: tapwage,
     transform: function(body) {
@@ -26,7 +24,7 @@ const fetcher = async () => {
             .find('li.search-item h2 a')
             .text()
             .trim()
-          singleOffer.excerpt = $(this)
+          singleOffer.description = $(this)
             .find('li div.search-item-text a')
             .text()
             .trim()
@@ -51,5 +49,5 @@ const fetcher = async () => {
 };
 
 module.exports = {
-  fetcher
+  tapwageFetcher
 }

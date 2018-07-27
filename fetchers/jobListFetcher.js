@@ -22,7 +22,7 @@ const jobListFetcher = async () => {
             .find('div .Trust h3 a')
             .text()
             .trim()
-          singleOffer.excerpt = $(this)
+          singleOffer.description = $(this)
             .find('.Trust-bot-left p')
             .text()
             .trim()

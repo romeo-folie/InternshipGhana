@@ -12,7 +12,7 @@ var OfferSchema = new mongoose.Schema({
     trim: true,
     unique, true
   },
-  excerpt:{
+  description:{
     type: String,
     trim: true
   },
