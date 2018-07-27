@@ -25,9 +25,9 @@ const receiveData = async() => {
           location: offer.location || "Unknown"
         })
         .then(result => {
-          let status = result.doc
+          var status = result.doc
           // console.log('The document you want to add was', status.created ? 'found' : 'created')
-        })
+        }).catch((e) => {})
     })
   } catch (e) {
     console.log(e)

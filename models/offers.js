@@ -5,6 +5,7 @@ var OfferSchema = new mongoose.Schema({
   title:{
     type: String,
     required: true,
+    unique: true,
     trim: true
   },
   link:{
@@ -24,7 +25,9 @@ var OfferSchema = new mongoose.Schema({
   }
 });
 
+//mongoose-findOrCreate doesn't seem to be working
+
 OfferSchema.plugin(findOrCreate)
-var Offer = mongoose.model('Offer', OfferSchema)
+const Offer = mongoose.model('Offer', OfferSchema)
 
 module.exports = {Offer}
