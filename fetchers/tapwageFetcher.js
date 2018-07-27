@@ -26,7 +26,7 @@ const fetcher = async () => {
             .find('li.search-item h2 a')
             .text()
             .trim()
-          singleOffer.company = $(this)
+          singleOffer.excerpt = $(this)
             .find('li div.search-item-text a')
             .text()
             .trim()
@@ -34,6 +34,10 @@ const fetcher = async () => {
             .find('li div.search-item-text')
             .text()
             .split("-")[1]
+            .trim()
+          singleOffer.link = $(this)
+            .find('li.search-item h2 a')
+            .attr('href')
             .trim()
           internshipOffers.push(singleOffer)
         }

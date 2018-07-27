@@ -1,7 +1,9 @@
 require('./config/config');
 const express = require('express')
+var {mongoose} = require('./db/mongoose');
 const {fetcher} = require('./fetchers/tapwageFetcher');
-const port = process.env.PORT;
+const {jobListFetcher} = require('./fetchers/jobListFetcher');
+const port = process.env.PORT
 
 const app = express()
 app.set('view engine', 'hbs')
@@ -10,7 +12,7 @@ app.use(express.static('public'))
 //fetch data from tapwage
 //this is for function with async tag
 //since fetcher is an async function, see if using await here will work
-var results = fetcher()
+var results = jobListFetcher()
 results
 .then(dt => console.log(dt))
 .catch(e => console.log(e))

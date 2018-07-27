@@ -5,6 +5,6 @@ if (env === 'development'){
   var envConfig = config[env]
   //for each of the keys inside the envConfig object process.env.key is the value of the envConfig object's value for that same key
   Object.keys(envConfig).forEach((key) => {
-    process.env.key = envConfig[key]
-  })
+    process.env[key] = envConfig[key]
+  });
 }
