@@ -1,6 +1,6 @@
 {
   "development": {
     "PORT": 3000,
-    "MONGODB_URI": "mongodb://localhost:27017/InternshipApp"
+    "MONGODB_URI": "mongodb://romeo:testing1234@ds253871.mlab.com:53871/internshipapp"
   }
 }

@@ -8,3 +8,5 @@ if (env === 'development'){
     process.env[key] = envConfig[key]
   });
 }
+
+//"mongodb://localhost:27017/InternshipApp"

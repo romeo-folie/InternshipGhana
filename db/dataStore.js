@@ -22,7 +22,7 @@ const receiveData = async() => {
           title: offer.title,
           link: offer.link,
           description: offer.description,
-          location: offer.location || ""
+          location: offer.location || "Unknown"
         })
         .then(result => {
           let status = result.doc
