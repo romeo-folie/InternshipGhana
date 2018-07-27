@@ -1,24 +1,36 @@
 //This is going to push all the data that we scraped to the database
 const {
   tapwageFetcher
-} = require('./fetchers/tapwageFetcher');
+} = require('./../fetchers/tapwageFetcher');
 const {
   jobListFetcher
-} = require('./fetchers/jobListFetcher');
+} = require('./../fetchers/jobListFetcher');
 const {
-  Offers
+  Offer
 } = require('./../models/offers');
 
-
 //Retrieve the values from the returned promises
-const recepient = async() => {
+const receiveData = async() => {
   try {
     const joblistOffers = await jobListFetcher()
     const tapwageOffers = await tapwageFetcher()
-  //add the data to the database
+    //get all the data into one array, iterate over it, then add data to the database
 
-
+    let jointData = joblistOffers.concat(tapwageOffers)
+    jointData.forEach((offer) => {
+      Offer.findOrCreate({
+          title: offer.title,
+          link: offer.link,
+          description: offer.description,
+          location: offer.location || ""
+        })
+        .then(result => {
+          let status = result.doc
+          console.log('The document you want to add was', status.created ? 'found' : 'created')
+        })
+    })
   } catch (e) {
     console.log(e)
   }
 }
+receiveData()

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const findOrCreate = require('mongoose-findorcreate');
 
 var OfferSchema = new mongoose.Schema({
   title:{
@@ -10,7 +11,7 @@ var OfferSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    unique, true
+    unique: true
   },
   description:{
     type: String,
@@ -19,9 +20,11 @@ var OfferSchema = new mongoose.Schema({
   location:{
     type: String,
     trim: true,
+    default: null
   }
 });
 
+OfferSchema.plugin(findOrCreate)
 var Offer = mongoose.model('Offer', OfferSchema)
 
 module.exports = {Offer}
