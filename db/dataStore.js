@@ -26,7 +26,7 @@ const receiveData = async() => {
         })
         .then(result => {
           let status = result.doc
-          console.log('The document you want to add was', status.created ? 'found' : 'created')
+          // console.log('The document you want to add was', status.created ? 'found' : 'created')
         })
     })
   } catch (e) {

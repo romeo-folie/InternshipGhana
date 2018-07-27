@@ -19,10 +19,11 @@ app.get('/', async(req, res) => {
   //fetch data from database and pass it to the view
   try {
     var data = await Offer.find({})
-    // res.render('index', {
-    //   offers: data
-    // })
-    res.send({data})
+    res.render('index', {
+      offers: data,
+      title: "Home"
+    })
+    // res.send({data})
   } catch (e) {
     console.log(e)
   }
