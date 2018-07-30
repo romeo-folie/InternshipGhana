@@ -1,10 +1,10 @@
-/*!
+/* !
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+/* :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -407,6 +407,8 @@ h5 {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  outline: 1px solid red;
+  max-height: 300px;
 }
 
 .card-body {
@@ -474,5 +476,5 @@ h5 {
   body {
     min-width: 992px !important;
   }
-}
+} */
 /*# sourceMappingURL=bootstrap.css.map */
