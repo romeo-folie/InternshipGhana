@@ -5,23 +5,26 @@
 
 body {
   width: 100%;
+  color: #283149;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .btn {
   color: white;
-  outline: 1px solid red;
   text-decoration: none;
-  background: #00b7ff;
-  padding: 10px;
+  background: #7971ea;
+  padding: 8px 10px;
+  margin-bottom: 30px;
   border-radius: 0.25rem;
   margin-top: auto;
+  width: 23%;
+  text-align: center;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  outline: 1px solid red;
   width: 350px;
-  height: 300px;
+  height: 280px;
   margin: 10px;
   position: relative;
   word-wrap: break-word;
@@ -32,12 +35,11 @@ body {
 }
 
 .card-body {
-  /* -ms-flex: 1 1 auto; */
   flex-flow: column;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   padding: 1.25rem;
+  height: 100%;
 }
 
 .card-title {
@@ -66,4 +68,10 @@ p {
   /* line-height: 22px; */
   letter-spacing: normal;
   text-align: left;
+}
+@media (max-width: 320px) {
+  .btn {
+    width: 30%;
+    font-size: 14px;
+  }
 }
