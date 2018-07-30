@@ -1,8 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
+  width: 100%;
+  color: #283149;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.btn {
+  color: white;
+  text-decoration: none;
+  background: #7971ea;
+  padding: 8px 10px;
+  margin-bottom: 30px;
+  border-radius: 0.25rem;
+  margin-top: auto;
+  width: 23%;
+  text-align: center;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 350px;
+  height: 280px;
+  margin: 10px;
+  position: relative;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: inherit;
+}
+
+p {
+  font-size: 16px;
+  /* line-height: 22px; */
+  letter-spacing: normal;
+  text-align: left;
+}
+@media (max-width: 320px) {
+  .btn {
+    width: 30%;
+    font-size: 14px;
+  }
 }
