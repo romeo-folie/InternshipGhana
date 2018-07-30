@@ -2,8 +2,5 @@
   "development": {
     "PORT": 3000,
     "MONGODB_URI": "mongodb://romeo:testing1234@ds253871.mlab.com:53871/internshipapp"
-  },
-  "production": {
-    "MONGODB_URI": "echo ${process.env.MONGOLAB_URI}"
   }
 }

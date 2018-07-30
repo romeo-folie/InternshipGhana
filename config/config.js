@@ -11,9 +11,9 @@ if (env === 'development'){
   var envConfig = config[env]
   passValues()
 } else if(env === 'production'){
-  var config = require('./config.json');
-  var envConfig = config[env]
-  passValues()
+  // var config = require('./config.json');
+  // var envConfig = config[env]
+  process.env.MONGODB_URI = process.env.MONGOLAB_URI
 }
 
 //"mongodb://localhost:27017/InternshipApp"
@@ -21,3 +21,8 @@ if (env === 'development'){
 // Object.keys(envConfig).forEach((key) => {
 //   process.env[key] = envConfig[key]
 // });
+
+// ,
+// "production": {
+//   "MONGODB_URI": "echo ${process.env.MONGOLAB_URI}"
+// }
