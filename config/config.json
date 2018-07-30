@@ -4,6 +4,6 @@
     "MONGODB_URI": "mongodb://romeo:testing1234@ds253871.mlab.com:53871/internshipapp"
   },
   "production": {
-    "MONGODB_URI": "mongodb://romeo:testing1234@ds253871.mlab.com:53871/internshipapp"
+    "MONGODB_URI": "cross-var echo ${process.env.MONGOLAB_URI}"
   }
 }
