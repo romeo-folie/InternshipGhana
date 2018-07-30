@@ -75,3 +75,10 @@ p {
     font-size: 14px;
   }
 }
+
+@media (max-width: 740px) and (min-width: 412px) {
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+}
