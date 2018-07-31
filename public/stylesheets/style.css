@@ -82,3 +82,18 @@ p {
     height: 200px;
   }
 }
+
+nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7971ea;
+  color: white;
+  font-size: 20px;
+}
+
+.about {
+  margin: 30px 70px;
+  font-size: 17px;
+}
