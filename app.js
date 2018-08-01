@@ -20,7 +20,6 @@ app.get('/', async(req, res) => {
     var data = await Offer.find({})
     res.render('index', {
       offers: data,
-      title: "Home"
     })
   } catch (e) {
     console.log(e)

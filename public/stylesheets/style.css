@@ -84,16 +84,19 @@ p {
 }
 
 nav {
-  height: 50px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #7971ea;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .about {
-  margin: 30px 70px;
-  font-size: 17px;
+  margin: 20px 70px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
